@@ -1,0 +1,153 @@
+html{
+  height: 100%;
+}
+body {
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 145, 0, 0.534),
+    rgba(250, 240, 130, 0.824),
+    rgba(129, 239, 254, 0.669)
+  );
+  font-family: sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+#box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.437);
+  height: 60vh;
+  width: 45vh;
+  margin: auto;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.06);
+  font-family: sans-serif;
+  backdrop-filter: blur(20px);
+  font-size: 100%;
+}
+/* ... (Your existing CSS) */
+
+/* ... (Your existing CSS rules) */
+
+.screen {
+  background-color: white;
+  margin: 7%;
+  margin-bottom: 0px;
+  padding-right: 20px;
+  height: 15%;
+  min-height: fit-content;
+  border-radius: 8px;
+  font-size: 2em;
+  box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.093);
+  overflow: hidden; /* Hide overflow for animation */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.text {
+  display: inline-block;
+  transition: transform 0.3s ease; /* Add a transition for text animation */
+}
+
+.text.scroll-up-animation {
+  animation: scrollUp 0.5s;
+}
+
+@keyframes scrollUp {
+  0% {
+     opacity: 0;
+     /* scale: 0.7; */
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    /* scale: 1; */
+    transform: translateY(0);
+  }
+}
+
+/* ... (Your existing CSS rules) */
+
+#buttons {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 7%;
+  flex-grow: 1;
+}
+
+.button-row {
+  display: flex;
+  flex-grow: 1;
+  gap: 10px;
+}
+
+#buttons :first-child :first-child {
+  flex-grow: 2.35;
+}
+
+#buttons :last-child :first-child {
+  flex-grow: 3.8;
+}
+
+.button {
+  flex-grow: 1;
+  margin: 5px 0px;
+  align-items: stretch;
+  flex-basis: 0;
+  border-radius: 10px;
+  background-color: white;
+  border-width: 0px;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.083);
+  background-image: linear-gradient(white, rgb(236, 235, 235));
+  transition: all 0.1s ease;
+}
+
+.operator{
+  background-image: linear-gradient(rgb(66, 66, 66),black);
+  color: white;
+}
+
+#buttons :first-child :first-child{
+  background-image: linear-gradient(rgb(255, 81, 0),rgb(255, 0, 0));
+}
+.button :first-child {
+  margin-top: 0px;
+}
+.button :last-child {
+  margin-bottom: 0px;
+}
+
+.button:hover {
+  background-color: #f0f0f0; /* Change background color on hover */
+  transform: scale(1.04); /* Add a slight scale effect on hover */
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1); /* Add a shadow effect on hover */
+}
+.button:active {
+  transform: scale(0.9);
+}
+
+@media only screen and (min-width: 0px) {
+  #box{
+    height: 106vw;
+    width: 80vw;
+  }
+  .button{
+    font-size: 6vw;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  #box{
+    height: 60vh;
+    width: 45vh;
+  }
+  .button{
+    font-size: 30px;
+
+  }
+}
+/* Add this to your existing CSS */
